@@ -15,7 +15,7 @@ scores = tf.constant([[[1,3,2],
 
 batch_size = 2
 to_seq_len = 3
-k = 3
+k = 0
 
 _, top_indices = tf.nn.top_k(tf.reshape(scores, (batch_size,-1)), k)
 # batch_size * k * 2
