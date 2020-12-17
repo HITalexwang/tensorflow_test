@@ -38,9 +38,9 @@ def drop_input_independent(word_embeddings, tag_embeddings, dropout_emb):
 
 input = torch.Tensor(2,3,4).random_() % 10
 print (input)
-output = drop_sequence_sharedmask(input, 0.5)
+#output = drop_sequence_sharedmask(input, 0.5)
 
-#output, _ = drop_input_independent(input, input, 0.5)
+output, _ = drop_input_independent(input, input, 0.5)
 print (output)
 
 drop = nn.Dropout(0.5)
